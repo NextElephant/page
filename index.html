@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses - Rs. 99 Each</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .section {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-bottom: 20px;
+        }
+        .course {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+        }
+        .course h3 {
+            margin-top: 0;
+        }
+        .buy-now {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buy-now:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Online Courses - Rs. 99 Each</h1>
+</header>
+
+<nav>
+    <a href="#ai">AI Courses</a>
+    <a href="#finance">Finance Courses</a>
+    <a href="#english">English Speaking</a>
+    <a href="#job">Job Search Help</a>
+</nav>
+
+<div class="section" id="ai">
+    <h2>AI Courses</h2>
+    <div class="course">
+        <h3>Intro to AI</h3>
+        <p>Learn the basics of AI and its applications in modern industries.</p>
+        <button class="buy-now" onclick="buyCourse('Intro to AI')">Buy Now</button>
+    </div>
+    <div class="course">
+        <h3>Machine Learning Essentials</h3>
+        <p>Get started with Machine Learning, an essential AI skill.</p>
+        <button class="buy-now" onclick="buyCourse('Machine Learning Essentials')">Buy Now</button>
+    </div>
+    <!-- Add more AI courses as needed -->
+</div>
+
+<div class="section" id="finance">
+    <h2>Finance Courses</h2>
+    <div class="course">
+        <h3>Personal Finance Management</h3>
+        <p>Master the art of managing your personal finances effectively.</p>
+        <button class="buy-now" onclick="buyCourse('Personal Finance Management')">Buy Now</button>
+    </div>
+    <div class="course">
+        <h3>Investing for Beginners</h3>
+        <p>Learn how to start investing and grow your wealth.</p>
+        <button class="buy-now" onclick="buyCourse('Investing for Beginners')">Buy Now</button>
+    </div>
+    <!-- Add more Finance courses as needed -->
+</div>
+
+<div class="section" id="english">
+    <h2>English Speaking</h2>
+    <div class="course">
+        <h3>Basic English Speaking</h3>
+        <p>Build your confidence in speaking basic English.</p>
+        <button class="buy-now" onclick="buyCourse('Basic English Speaking')">Buy Now</button>
+    </div>
+    <div class="course">
+        <h3>Advanced English Communication</h3>
+        <p>Enhance your English communication skills for professional use.</p>
+        <button class="buy-now" onclick="buyCourse('Advanced English Communication')">Buy Now</button>
+    </div>
+    <!-- Add more English Speaking courses as needed -->
+</div>
+
+<div class="section" id="job">
+    <h2>Job Search Help</h2>
+    <div class="course">
+        <h3>Resume Writing Tips</h3>
+        <p>Learn how to craft a resume that stands out to employers.</p>
+        <button class="buy-now" onclick="buyCourse('Resume Writing Tips')">Buy Now</button>
+    </div>
+    <div class="course">
+        <h3>Interview Preparation</h3>
+        <p>Prepare for your next interview with confidence.</p>
+        <button class="buy-now" onclick="buyCourse('Interview Preparation')">Buy Now</button>
+    </div>
+    <!-- Add more Job Search Help courses as needed -->
+</div>
+
+<script>
+    function buyCourse(courseName) {
+        alert('You have chosen to buy ' + courseName + ' for Rs. 99');
+        // Add logic to redirect to payment page or process the purchase
+    }
+</script>
+
+</body>
+</html>
