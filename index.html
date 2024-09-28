@@ -17,7 +17,7 @@
             color: #333;
         }
         .header {
-            background-color: #ff758c; /* Changed to a more clickable color */
+            background-color: #6a0dad; /* Changed to a more attractive purple color */
             padding: 20px;
             text-align: center;
             color: white;
@@ -40,6 +40,7 @@
             top: 0;
             left: 0;
             opacity: 0.3;
+            z-index: 1; /* Set z-index to keep it below the header */
         }
         
         /* Updated Navigation */
@@ -49,6 +50,8 @@
             display: flex;
             justify-content: center; /* Center the nav items */
             border-bottom: 2px solid #eee;
+            position: relative; /* To allow z-index to work */
+            z-index: 2; /* Ensure nav is above pyramid background */
         }
         .nav-container {
             width: 100%;
@@ -188,7 +191,6 @@
     <p>Discover the Best AI, Job Search, and More Courses</p>
 </div>
 
-
 <!-- Updated Navigation -->
 <nav>
     <div class="nav-container">
@@ -207,15 +209,8 @@
     <h1>Explore Your Path to Success</h1>
 </div>
 
-<!-- Add other sections here -->
-
-</body>
-
-
-
-
 <!-- AI Courses Section -->
-<div id="ai" class="section">
+<div id="ai-courses" class="section">
     <h2>Artificial Intelligence Courses</h2>
     <div class="course-grid">
         <div class="course">
@@ -243,119 +238,97 @@
             </div>
         </div>
         <div class="course">
-            <img src="https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg" alt="AI Course 4" loading="lazy">
+            <img src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg" alt="AI Course 4" loading="lazy">
             <div class="course-content">
-                <h3>Introduction to Neural Networks</h3>
-                <p>Get an overview of neural networks and their applications in AI.</p>
+                <h3>Machine Learning A-Z</h3>
+                <p>Master machine learning with a comprehensive step-by-step guide.</p>
                 <a class="purchase-btn" href="ai-course-4.html">Buy Now</a>
             </div>
         </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="AI Course 5" loading="lazy">
-            <div class="course-content">
-                <h3>Natural Language Processing</h3>
-                <p>Learn about NLP techniques and build chatbots with AI.</p>
-                <a class="purchase-btn" href="ai-course-5.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg" alt="AI Course 6" loading="lazy">
-            <div class="course-content">
-                <h3>AI Ethics</h3>
-                <p>Understand ethical issues surrounding AI and machine learning.</p>
-                <a class="purchase-btn" href="ai-course-6.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/4144957/pexels-photo-4144957.jpeg" alt="AI Course 7" loading="lazy">
-            <div class="course-content">
-                <h3>Computer Vision Basics</h3>
-                <p>Learn the basics of computer vision and how to build image processing apps.</p>
-                <a class="purchase-btn" href="ai-course-7.html">Buy Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Job Search Courses Section -->
-<div id="job-search" class="section">
-    <h2>Job Search Courses</h2>
-    <div class="course-grid">
-        <div class="course">
-            <img src="https://images.pexels.com/photos/1181674/pexels-photo-1181674.jpeg" alt="Job Search Course 1" loading="lazy">
-            <div class="course-content">
-                <h3>Resume Writing 101</h3>
-                <p>Learn the art of crafting the perfect resume that stands out to employers.</p>
-                <a class="purchase-btn" href="job-course-1.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/3807693/pexels-photo-3807693.jpeg" alt="Job Search Course 2" loading="lazy">
-            <div class="course-content">
-                <h3>Interview Skills Mastery</h3>
-                <p>Prepare for interviews with proven techniques and strategies.</p>
-                <a class="purchase-btn" href="job-course-2.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/3205571/pexels-photo-3205571.jpeg" alt="Job Search Course 3" loading="lazy">
-            <div class="course-content">
-                <h3>Networking for Success</h3>
-                <p>Master networking skills to build connections that can lead to job opportunities.</p>
-                <a class="purchase-btn" href="job-course-3.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="Job Search Course 4" loading="lazy">
-            <div class="course-content">
-                <h3>LinkedIn Optimization</h3>
-                <p>Learn how to effectively use LinkedIn to enhance your job search.</p>
-                <a class="purchase-btn" href="job-course-4.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/5077039/pexels-photo-5077039.jpeg" alt="Job Search Course 5" loading="lazy">
-            <div class="course-content">
-                <h3>Personal Branding Essentials</h3>
-                <p>Create a personal brand that attracts employers and opportunities.</p>
-                <a class="purchase-btn" href="job-course-5.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/4145475/pexels-photo-4145475.jpeg" alt="Job Search Course 6" loading="lazy">
-            <div class="course-content">
-                <h3>Job Search Strategies</h3>
-                <p>Explore effective strategies for finding and applying for jobs.</p>
-                <a class="purchase-btn" href="job-course-6.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg" alt="Job Search Course 7" loading="lazy">
-            <div class="course-content">
-                <h3>Negotiating Job Offers</h3>
-                <p>Learn how to negotiate your salary and benefits effectively.</p>
-                <a class="purchase-btn" href="job-course-7.html">Buy Now</a>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://images.pexels.com/photos/4204915/pexels-photo-4204915.jpeg" alt="Job Search Course 8" loading="lazy">
-            <div class="course-content">
-                <h3>Online Job Applications</h3>
-                <p>Get tips for completing job applications that get noticed by employers.</p>
-                <a class="purchase-btn" href="job-course-8.html">Buy Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Finance Section -->
-<div id="finance" class="section">
-    <h2>Finance Courses</h2>
-    <div class="coming-soon">
-        <p>Coming Soon!</p>
-        <img src="https://images.pexels.com/photos/4145071/pexels-photo-4145071.jpeg" alt="Finance Courses Coming Soon" loading="lazy" style="width: 100%; border-radius: 8px;">
-            <a class="purchase-btn" href="job-course-7.html">Click here to know more</a>
     </div>
 </div>
 
+<!-- Job Search Courses Section -->
+<div id="job-search-courses" class="section">
+    <h2>Job Search Courses</h2>
+    <div class="course-grid">
+        <div class="course">
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Job Search Course 1" loading="lazy">
+            <div class="course-content">
+                <h3>Resume Writing Essentials</h3>
+                <p>Create an impactful resume that stands out to employers.</p>
+                <a class="purchase-btn" href="job-search-course-1.html">Buy Now</a>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Job Search Course 2" loading="lazy">
+            <div class="course-content">
+                <h3>Interview Techniques</h3>
+                <p>Learn how to ace your interviews with confidence and skill.</p>
+                <a class="purchase-btn" href="job-search-course-2.html">Buy Now</a>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg" alt="Job Search Course 3" loading="lazy">
+            <div class="course-content">
+                <h3>Networking Strategies</h3>
+                <p>Build a professional network that opens doors to new opportunities.</p>
+                <a class="purchase-btn" href="job-search-course-3.html">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Finance Courses Section -->
+<div id="finance-courses" class="section">
+    <h2>Finance Courses</h2>
+    <div class="course-grid">
+        <div class="course">
+            <img src="https://images.pexels.com/photos/509908/pexels-photo-509908.jpeg" alt="Finance Course 1" loading="lazy">
+            <div class="course-content">
+                <h3>Personal Finance 101</h3>
+                <p>Manage your money effectively with this beginner's guide.</p>
+                <a class="purchase-btn" href="finance-course-1.html">Buy Now</a>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://images.pexels.com/photos/669646/pexels-photo-669646.jpeg" alt="Finance Course 2" loading="lazy">
+            <div class="course-content">
+                <h3>Investing Basics</h3>
+                <p>Learn the fundamentals of investing and build your portfolio.</p>
+                <a class="purchase-btn" href="finance-course-2.html">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- English Speaking Courses Section -->
+<div id="english-speaking-courses" class="section">
+    <h2>English Speaking Courses</h2>
+    <div class="course-grid">
+        <div class="course">
+            <img src="https://images.pexels.com/photos/374908/pexels-photo-374908.jpeg" alt="English Speaking Course 1" loading="lazy">
+            <div class="course-content">
+                <h3>Conversational English</h3>
+                <p>Improve your speaking skills with practical conversation practice.</p>
+                <a class="purchase-btn" href="english-course-1.html">Buy Now</a>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://images.pexels.com/photos/3184400/pexels-photo-3184400.jpeg" alt="English Speaking Course 2" loading="lazy">
+            <div class="course-content">
+                <h3>Business English</h3>
+                <p>Enhance your professional communication skills in English.</p>
+                <a class="purchase-btn" href="english-course-2.html">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                    
 <!-- Additional Courses Section -->
 <div id="additional-courses" class="section">
     <h2>Additional Courses</h2>
