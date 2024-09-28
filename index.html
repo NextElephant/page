@@ -7,44 +7,51 @@
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
             margin: 0;
             padding: 0;
         }
         .header {
-            background-color: #6a11cb;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 24px;
+            padding: 40px 20px;
+            font-size: 36px;
+            border-bottom: 4px solid #fff;
         }
         .nav {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #2575fc;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         .nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             color: white;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #f4f4f4;
         }
         .section {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
         }
         .section h2 {
             margin-bottom: 20px;
             color: #6a11cb;
-            font-size: 24px;
+            font-size: 28px;
+            text-align: center;
         }
         .course-grid {
             display: grid;
@@ -53,44 +60,50 @@
         }
         .course {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #ffffff;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .course:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .course img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 10px 10px 0 0;
         }
         .course h3 {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 20px;
+            margin: 15px 0;
+            color: #2575fc;
         }
         .course p {
-            font-size: 14px;
+            font-size: 15px;
             margin: 10px 0;
             color: #555;
         }
         .buy-now {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #2575fc;
+            padding: 12px 24px;
+            background-color: #6a11cb;
             color: white;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
         .buy-now:hover {
-            background-color: #6a11cb;
+            background-color: #2575fc;
         }
         @media (max-width: 768px) {
             .nav a {
                 display: block;
                 margin: 10px 0;
+            }
+            .section {
+                margin: 10px;
             }
         }
     </style>
@@ -196,137 +209,4 @@
             <h3>Understanding Market Trends</h3>
             <p>Stay ahead by analyzing market trends.</p>
             <a href="finance-course-5.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 6">
-            <h3>Risk Management Techniques</h3>
-            <p>Manage risk effectively in your investments.</p>
-            <a href="finance-course-6.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 7">
-            <h3>Dividend Investing Strategies</h3>
-            <p>Maximize returns through dividend stocks.</p>
-            <a href="finance-course-7.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 8">
-            <h3>Behavioral Finance Insights</h3>
-            <p>Understand psychological factors in investing.</p>
-            <a href="finance-course-8.html" class="buy-now">Buy Now</a>
-        </div>
-    </div>
-</div>
-
-<!-- English Speaking Section -->
-<div id="english" class="section">
-    <h2>English Speaking Courses</h2>
-    <div class="course-grid">
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 1">
-            <h3>Speak English Confidently</h3>
-            <p>Boost your confidence in speaking English.</p>
-            <a href="english-course-1.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 2">
-            <h3>Fluent English in 30 Days</h3>
-            <p>Achieve fluency quickly with our proven methods.</p>
-            <a href="english-course-2.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 3">
-            <h3>Business Communication Skills</h3>
-            <p>Enhance your communication skills for business.</p>
-            <a href="english-course-3.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 4">
-            <h3>Master English Pronunciation</h3>
-            <p>Improve your pronunciation for clearer communication.</p>
-            <a href="english-course-4.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 5">
-            <h3>English for Job Interviews</h3>
-            <p>Prepare for job interviews with key phrases.</p>
-            <a href="english-course-5.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 6">
-            <h3>Effective Business Writing</h3>
-            <p>Learn to write impactful business documents.</p>
-            <a href="english-course-6.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 7">
-            <h3>Conversational English Mastery</h3>
-            <p>Become a pro at casual conversations in English.</p>
-            <a href="english-course-7.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Course 8">
-            <h3>Interviewing in English</h3>
-            <p>Learn strategies for effective interviewing in English.</p>
-            <a href="english-course-8.html" class="buy-now">Buy Now</a>
-        </div>
-    </div>
-</div>
-
-<!-- Job Search Help Section -->
-<div id="jobsearch" class="section">
-    <h2>Job Search Help Courses</h2>
-    <div class="course-grid">
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 1">
-            <h3>Resume Masterclass: Stand Out</h3>
-            <p>Craft a resume that captures attention.</p>
-            <a href="job-course-1.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 2">
-            <h3>Cracking the Interview Code</h3>
-            <p>Strategies to ace your job interviews.</p>
-            <a href="job-course-2.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 3">
-            <h3>Building a Powerful LinkedIn Profile</h3>
-            <p>Enhance your online presence to attract recruiters.</p>
-            <a href="job-course-3.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 4">
-            <h3>Networking for Career Success</h3>
-            <p>Unlock opportunities through effective networking.</p>
-            <a href="job-course-4.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 5">
-            <h3>Job Search Strategies That Work</h3>
-            <p>Discover proven strategies for a successful job hunt.</p>
-            <a href="job-course-5.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 6">
-            <h3>Cover Letter Secrets to Get Noticed</h3>
-            <p>Write cover letters that stand out in applications.</p>
-            <a href="job-course-6.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 7">
-            <h3>Understanding the Job Market</h3>
-            <p>Stay informed about the current job market trends.</p>
-            <a href="job-course-7.html" class="buy-now">Buy Now</a>
-        </div>
-        <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Course 8">
-            <h3>Follow-Up Strategies Post Interview</h3>
-            <p>Learn how to follow up effectively after interviews.</p>
-            <a href="job-course-8.html" class="buy-now">Buy Now</a>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+       
