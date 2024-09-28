@@ -232,4 +232,15 @@
 
             if (otp) {
                 alert(`OTP verified. Redirecting to payment for ${courseName}...`);
-                window.location.href = "https://payment-gateway-url.com
+                window.location.href = "https://payment-gateway-url.com"; // Simulate payment gateway URL
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        } else {
+            alert("Phone number is required to proceed.");
+        }
+    }
+</script>
+
+</body>
+</html>
