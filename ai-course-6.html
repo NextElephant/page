@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ethics and Society</title>
+    <style>
+        /* Same styles as above */
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>AI Ethics and Society</h1>
+</div>
+
+<div class="course-content">
+    <h2>Course Overview</h2>
+    <p>Explore the ethical implications of AI technology and its impact on society. Understand the importance of responsible AI development.</p>
+    
+    <h3>What You'll Learn:</h3>
+    <ul>
+        <li>Understanding AI Ethics</li>
+        <li>Bias in AI Systems</li>
+        <li>AI for Social Good</li>
+        <li>Future of Work and AI</li>
+    </ul>
+
+    <h3>Price: ₹99</h3>
+    <h3>Enter Your Phone Number to Purchase:</h3>
+    <form id="purchaseForm" onsubmit="storeData(event)">
+        <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required>
+        <input type="hidden" id="courseName" value="AI Ethics and Society">
+        <button type="submit" class="buy-now">Buy Now</button>
+    </form>
+</div>
+
+<script>
+    function storeData(event) {
+        event.preventDefault();
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const courseName = document.getElementById("courseName").value;
+
+        localStorage.setItem('phoneNumber', phoneNumber);
+        localStorage.setItem('courseName', courseName);
+        
+        alert(`Thank you for purchasing ${courseName}!\nYour phone number has been stored.`);
+        window.location.href = 'index.html'; // Change this to your desired redirect page
+    }
+</script>
+
+</body>
+</html>
