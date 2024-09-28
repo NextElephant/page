@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses</title>
+    <title>Online Courses - Learn & Earn</title>
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         .header {
-            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            background-color: #6a11cb;
             color: white;
             text-align: center;
             padding: 40px 20px;
-            font-size: 36px;
-            border-bottom: 4px solid #fff;
+            font-size: 32px;
+            border-bottom: 5px solid #2575fc;
         }
         .nav {
             text-align: center;
@@ -29,23 +30,22 @@
             z-index: 1000;
         }
         .nav a {
-            margin: 0 20px;
+            margin: 0 15px;
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             transition: color 0.3s;
         }
         .nav a:hover {
-            color: #f4f4f4;
+            color: #6a11cb;
         }
         .section {
-            margin: 20px auto;
+            margin: 20px;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             margin-bottom: 20px;
@@ -60,50 +60,54 @@
         }
         .course {
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
         }
         .course:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
         }
         .course img {
             width: 100%;
-            border-radius: 10px 10px 0 0;
+            height: 150px;
+            border-radius: 8px;
         }
         .course h3 {
             font-size: 20px;
-            margin: 15px 0;
-            color: #2575fc;
+            margin: 10px 0;
         }
         .course p {
-            font-size: 15px;
+            font-size: 14px;
             margin: 10px 0;
             color: #555;
         }
-        .buy-now {
+        .submit-button {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #6a11cb;
+            padding: 10px 20px;
+            background-color: #2575fc;
             color: white;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
-            font-weight: bold;
         }
-        .buy-now:hover {
+        .submit-button:hover {
+            background-color: #6a11cb;
+        }
+        footer {
             background-color: #2575fc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
         @media (max-width: 768px) {
             .nav a {
                 display: block;
                 margin: 10px 0;
-            }
-            .section {
-                margin: 10px;
             }
         }
     </style>
@@ -115,63 +119,81 @@
 </div>
 
 <div class="nav">
+    <a href="#home">Home</a>
     <a href="#ai">AI</a>
     <a href="#finance">Finance</a>
     <a href="#english">English Speaking</a>
     <a href="#jobsearch">Job Search Help</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Home Section -->
+<div id="home" class="section">
+    <h2>Welcome to Our Online Courses</h2>
+    <p>Explore our diverse range of courses designed to help you learn and grow in your career. Each course is priced at just ₹99, making quality education accessible to everyone.</p>
+    <p>Join thousands of successful learners and take the next step towards your career goals!</p>
 </div>
 
 <!-- AI Section -->
 <div id="ai" class="section">
     <h2>AI Courses</h2>
     <div class="course-grid">
+        <!-- Each Course -->
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 1">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 1">
             <h3>AI Mastery: From Basics to Advanced</h3>
             <p>Become an AI expert with this comprehensive course.</p>
-            <a href="ai-course-1.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-1.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 2">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 2">
             <h3>Data Science with Python</h3>
             <p>Harness the power of Python for data analysis.</p>
-            <a href="ai-course-2.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-2.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 3">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 3">
             <h3>Deep Learning Techniques</h3>
             <p>Unlock the secrets of deep learning and neural networks.</p>
-            <a href="ai-course-3.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-3.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 4">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 4">
             <h3>Machine Learning with TensorFlow</h3>
             <p>Build intelligent systems using TensorFlow.</p>
-            <a href="ai-course-4.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-4.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 5">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 5">
             <h3>AI in Business: Practical Applications</h3>
             <p>Discover how businesses leverage AI for growth.</p>
-            <a href="ai-course-5.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-5.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 6">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 6">
             <h3>Building Chatbots with AI</h3>
             <p>Create intelligent chatbots for customer service.</p>
-            <a href="ai-course-6.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-6.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 7">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 7">
             <h3>AI for Data Visualization</h3>
             <p>Learn to visualize data using AI techniques.</p>
-            <a href="ai-course-7.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-7.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="AI Course 8">
+            <img src="https://via.placeholder.com/300x150" alt="AI Course 8">
             <h3>AI Ethics and Societal Impact</h3>
             <p>Understand the ethical implications of AI technology.</p>
-            <a href="ai-course-8.html" class="buy-now">Buy Now</a>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="ai-course-8.html" class="submit-button">Submit</a>
         </div>
     </div>
 </div>
@@ -180,33 +202,112 @@
 <div id="finance" class="section">
     <h2>Finance Courses</h2>
     <div class="course-grid">
+        <div class="
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 1">
-            <h3>Value Investing Fundamentals</h3>
-            <p>Learn the core principles of value investing.</p>
-            <a href="finance-course-1.html" class="buy-now">Buy Now</a>
+            <img src="https://via.placeholder.com/300x150" alt="Finance Course 1">
+            <h3>Personal Finance Management</h3>
+            <p>Learn to manage your finances effectively and plan for the future.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="finance-course-1.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 2">
-            <h3>Analyzing Financial Statements</h3>
-            <p>Master the art of reading financial statements.</p>
-            <a href="finance-course-2.html" class="buy-now">Buy Now</a>
+            <img src="https://via.placeholder.com/300x150" alt="Finance Course 2">
+            <h3>Investing in Stocks</h3>
+            <p>Understand the stock market and how to invest wisely.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="finance-course-2.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 3">
-            <h3>Building a Value Portfolio</h3>
-            <p>Create a successful portfolio with value stocks.</p>
-            <a href="finance-course-3.html" class="buy-now">Buy Now</a>
+            <img src="https://via.placeholder.com/300x150" alt="Finance Course 3">
+            <h3>Cryptocurrency Basics</h3>
+            <p>Discover the world of cryptocurrencies and how to invest.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="finance-course-3.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 4">
-            <h3>Investment Strategies for Long-Term Gains</h3>
-            <p>Learn to strategize for sustainable returns.</p>
-            <a href="finance-course-4.html" class="buy-now">Buy Now</a>
+            <img src="https://via.placeholder.com/300x150" alt="Finance Course 4">
+            <h3>Financial Planning for Retirement</h3>
+            <p>Plan your retirement effectively to secure your future.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="finance-course-4.html" class="submit-button">Submit</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Finance Course 5">
-            <h3>Understanding Market Trends</h3>
-            <p>Stay ahead by analyzing market trends.</p>
-            <a href="finance-course-5.html" class="buy-now">Buy Now</a>
-       
+            <img src="https://via.placeholder.com/300x150" alt="Finance Course 5">
+            <h3>Debt Management Strategies</h3>
+            <p>Learn how to manage and eliminate your debt.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="finance-course-5.html" class="submit-button">Submit</a>
+        </div>
+    </div>
+</div>
+
+<!-- English Speaking Section -->
+<div id="english" class="section">
+    <h2>English Speaking Courses</h2>
+    <div class="course-grid">
+        <div class="course">
+            <img src="https://via.placeholder.com/300x150" alt="English Course 1">
+            <h3>Basic English for Beginners</h3>
+            <p>A solid foundation in English for beginners.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="english-course-1.html" class="submit-button">Submit</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x150" alt="English Course 2">
+            <h3>Conversational English Skills</h3>
+            <p>Improve your speaking skills through practical conversation.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="english-course-2.html" class="submit-button">Submit</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x150" alt="English Course 3">
+            <h3>Business English Communication</h3>
+            <p>Learn the essentials of English for the business world.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="english-course-3.html" class="submit-button">Submit</a>
+        </div>
+    </div>
+</div>
+
+<!-- Job Search Help Section -->
+<div id="jobsearch" class="section">
+    <h2>Job Search Help</h2>
+    <div class="course-grid">
+        <div class="course">
+            <img src="https://via.placeholder.com/300x150" alt="Job Search Course 1">
+            <h3>Resume Writing Masterclass</h3>
+            <p>Create resumes that stand out to employers.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="jobsearch-course-1.html" class="submit-button">Submit</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x150" alt="Job Search Course 2">
+            <h3>Interview Techniques for Success</h3>
+            <p>Learn how to impress in job interviews.</p>
+            <input type="text" placeholder="Enter your phone number" maxlength="10" pattern="\d{10}" required>
+            <a href="jobsearch-course-2.html" class="submit-button">Submit</a>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+    <input type="text" placeholder="Enter your name" required>
+    <input type="email" placeholder="Enter your email" required>
+    <textarea rows="4" placeholder="Your message here..." required></textarea>
+    <a href="#" class="submit-button">Send Message</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Online Courses. All rights reserved.</p>
+    <p>Follow us on social media: 
+        <a href="#" style="color: white;">Instagram</a>, 
+        <a href="#" style="color: white;">Facebook</a>, 
+        <a href="#" style="color: white;">Twitter</a>
+    </p>
+</footer>
+
+</body>
+</html>
