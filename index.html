@@ -3,244 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses - Rs. 99 Each</title>
+    <title>Online Courses</title>
     <style>
-        /* General Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
         }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-            padding: 20px;
-            text-align: center;
+        .header {
+            background-color: #6a11cb;
             color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 1px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .nav {
+            text-align: center;
+            padding: 10px;
+            background-color: #2575fc;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        nav a {
-            color: #2575fc;
-            padding: 15px 20px;
+        .nav a {
+            margin: 0 15px;
+            color: white;
             text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
-        nav a:hover {
-            color: #6a11cb;
-        }
-
-        /* Section Styling */
         .section {
-            padding: 50px 20px;
-            margin: 20px 0;
+            margin: 20px;
+            padding: 20px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em;
+            margin-bottom: 20px;
             color: #6a11cb;
+            font-size: 24px;
         }
-
-        /* Courses Grid */
-        .courses-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
         .course {
-            width: 300px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .course:hover {
+            transform: scale(1.05);
         }
         .course img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            border-radius: 8px;
         }
         .course h3 {
-            font-size: 1.5em;
-            color: #333;
-            margin: 15px 0 10px 0;
+            font-size: 18px;
+            margin: 10px 0;
         }
         .course p {
-            font-size: 1em;
-            padding: 0 15px;
-            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+            color: #555;
         }
-        .course:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Buy Now Button */
         .buy-now {
             display: inline-block;
+            padding: 10px 20px;
             background-color: #2575fc;
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin: 20px 0;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
         .buy-now:hover {
             background-color: #6a11cb;
         }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .course {
-                width: 100%;
-            }
-            nav {
-                flex-direction: column;
+            .nav a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Online Courses for Rs. 99</h1>
-    <p>Master new skills with affordable courses!</p>
-</header>
+<div class="header">
+    <h1>Online Courses - Only ₹99 Each</h1>
+</div>
 
-<nav>
-    <a href="#ai">AI Courses</a>
-    <a href="#finance">Finance Courses</a>
+<div class="nav">
+    <a href="#ai">AI</a>
+    <a href="#finance">Finance</a>
     <a href="#english">English Speaking</a>
-    <a href="#job">Job Search Help</a>
-</nav>
+    <a href="#jobsearch">Job Search Help</a>
+</div>
 
 <!-- AI Section -->
-<div class="section" id="ai">
+<div id="ai" class="section">
     <h2>AI Courses</h2>
-    <div class="courses-container">
+    <div class="course-grid">
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 1">
             <h3>Intro to AI</h3>
-            <p>Learn the basics of AI and its applications in modern industries.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Intro to AI')">Buy Now</a>
+            <p>Learn the basics of Artificial Intelligence.</p>
+            <a href="ai-course-1.html" class="buy-now">Buy Now</a>
         </div>
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 2">
             <h3>Machine Learning Essentials</h3>
-            <p>Get started with Machine Learning, an essential AI skill.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Machine Learning Essentials')">Buy Now</a>
+            <p>Dive deep into ML algorithms and applications.</p>
+            <a href="ai-course-2.html" class="buy-now">Buy Now</a>
         </div>
-        <!-- Add more AI courses similarly -->
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="AI Course 3">
+            <h3>Deep Learning Fundamentals</h3>
+            <p>Master neural networks and deep learning.</p>
+            <a href="ai-course-3.html" class="buy-now">Buy Now</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="AI Course 4">
+            <h3>AI for Business</h3>
+            <p>Explore AI applications in business and marketing.</p>
+            <a href="ai-course-4.html" class="buy-now">Buy Now</a>
+        </div>
     </div>
 </div>
 
 <!-- Finance Section -->
-<div class="section" id="finance">
+<div id="finance" class="section">
     <h2>Finance Courses</h2>
-    <div class="courses-container">
+    <div class="course-grid">
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 1">
-            <h3>Personal Finance Management</h3>
-            <p>Master the art of managing your personal finances effectively.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Personal Finance Management')">Buy Now</a>
+            <h3>Personal Finance</h3>
+            <p>Manage your money and plan for the future.</p>
+            <a href="finance-course-1.html" class="buy-now">Buy Now</a>
         </div>
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 2">
             <h3>Investing for Beginners</h3>
-            <p>Learn how to start investing and grow your wealth.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Investing for Beginners')">Buy Now</a>
+            <p>Learn the basics of stocks, bonds, and investing.</p>
+            <a href="finance-course-2.html" class="buy-now">Buy Now</a>
         </div>
-        <!-- Add more Finance courses similarly -->
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="Finance Course 3">
+            <h3>Advanced Stock Trading</h3>
+            <p>Master strategies for successful stock trading.</p>
+            <a href="finance-course-3.html" class="buy-now">Buy Now</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="Finance Course 4">
+            <h3>Financial Planning</h3>
+            <p>Learn to build a long-term financial plan.</p>
+            <a href="finance-course-4.html" class="buy-now">Buy Now</a>
+        </div>
     </div>
 </div>
 
 <!-- English Speaking Section -->
-<div class="section" id="english">
+<div id="english" class="section">
     <h2>English Speaking Courses</h2>
-    <div class="courses-container">
+    <div class="course-grid">
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Speaking Course 1">
+            <img src="https://via.placeholder.com/300x200" alt="English Course 1">
             <h3>Basic English Speaking</h3>
-            <p>Build your confidence in speaking basic English.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Basic English Speaking')">Buy Now</a>
+            <p>Learn to speak English with confidence.</p>
+            <a href="english-course-1.html" class="buy-now">Buy Now</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="English Speaking Course 2">
-            <h3>Advanced English Communication</h3>
-            <p>Enhance your English communication skills for professional use.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Advanced English Communication')">Buy Now</a>
+            <img src="https://via.placeholder.com/300x200" alt="English Course 2">
+            <h3>Intermediate English</h3>
+            <p>Enhance your English communication skills.</p>
+            <a href="english-course-2.html" class="buy-now">Buy Now</a>
         </div>
-        <!-- Add more English courses similarly -->
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="English Course 3">
+            <h3>Business English</h3>
+            <p>Improve your English for professional settings.</p>
+            <a href="english-course-3.html" class="buy-now">Buy Now</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="English Course 4">
+            <h3>Fluency in English</h3>
+            <p>Master fluency with advanced speaking techniques.</p>
+            <a href="english-course-4.html" class="buy-now">Buy Now</a>
+        </div>
     </div>
 </div>
 
 <!-- Job Search Help Section -->
-<div class="section" id="job">
+<div id="jobsearch" class="section">
     <h2>Job Search Help Courses</h2>
-    <div class="courses-container">
+    <div class="course-grid">
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Search Course 1">
-            <h3>Resume Writing Tips</h3>
-            <p>Learn how to craft a resume that stands out to employers.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Resume Writing Tips')">Buy Now</a>
+            <img src="https://via.placeholder.com/300x200" alt="Job Course 1">
+            <h3>Resume Writing</h3>
+            <p>Craft a resume that stands out.</p>
+            <a href="job-course-1.html" class="buy-now">Buy Now</a>
         </div>
         <div class="course">
-            <img src="https://via.placeholder.com/300x200" alt="Job Search Course 2">
-            <h3>Interview Preparation</h3>
-            <p>Prepare for your next interview with confidence.</p>
-            <a href="#" class="buy-now" onclick="openPurchasePage('Interview Preparation')">Buy Now</a>
+            <img src="https://via.placeholder.com/300x200" alt="Job Course 2">
+            <h3>Job Interview Prep</h3>
+            <p>Get ready to ace your next job interview.</p>
+            <a href="job-course-2.html" class="buy-now">Buy Now</a>
         </div>
-        <!-- Add more Job Search courses similarly -->
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="Job Course 3">
+            <h3>LinkedIn Optimization</h3>
+            <p>Enhance your LinkedIn profile for job searches.</p>
+            <a href="job-course-3.html" class="buy-now">Buy Now</a>
+        </div>
+        <div class="course">
+            <img src="https://via.placeholder.com/300x200" alt="Job Course 4">
+            <h3>Networking Strategies</h3>
+            <p>Learn effective networking techniques.</p>
+            <a href="job-course-4.html" class="buy-now">Buy Now</a>
+        </div>
     </div>
 </div>
-
-<!-- Purchase Page Script -->
-<script>
-    function openPurchasePage(courseName) {
-        // Simulate purchase page
-        let phone = prompt(`Enter your phone number to purchase ${courseName}:`);
-
-        if (phone) {
-            let otp = prompt("Enter the OTP sent to your phone:");
-
-            if (otp) {
-                alert(`OTP verified. Redirecting to payment for ${courseName}...`);
-                window.location.href = "https://payment-gateway-url.com"; // Simulate payment gateway URL
-            } else {
-                alert("Invalid OTP. Please try again.");
-            }
-        } else {
-            alert("Phone number is required to proceed.");
-        }
-    }
-</script>
 
 </body>
 </html>
