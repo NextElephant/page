@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing (NLP)</title>
+    <style>
+        /* Same styles as above */
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Natural Language Processing (NLP)</h1>
+</div>
+
+<div class="course-content">
+    <h2>Course Overview</h2>
+    <p>Delve into the world of NLP and learn how to process and analyze textual data. Understand key techniques and applications in this growing field.</p>
+    
+    <h3>What You'll Learn:</h3>
+    <ul>
+        <li>Text Preprocessing Techniques</li>
+        <li>Sentiment Analysis</li>
+        <li>Text Generation</li>
+        <li>Building Chatbots</li>
+    </ul>
+
+    <h3>Price: ₹99</h3>
+    <h3>Enter Your Phone Number to Purchase:</h3>
+    <form id="purchaseForm" onsubmit="storeData(event)">
+        <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required>
+        <input type="hidden" id="courseName" value="Natural Language Processing (NLP)">
+        <button type="submit" class="buy-now">Buy Now</button>
+    </form>
+</div>
+
+<script>
+    function storeData(event) {
+        event.preventDefault();
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const courseName = document.getElementById("courseName").value;
+
+        localStorage.setItem('phoneNumber', phoneNumber);
+        localStorage.setItem('courseName', courseName);
+        
+        alert(`Thank you for purchasing ${courseName}!\nYour phone number has been stored.`);
+        window.location.href = 'index.html'; // Change this to your desired redirect page
+    }
+</script>
+
+</body>
+</html>
