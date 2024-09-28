@@ -18,11 +18,11 @@
             color: white;
             text-align: center;
             padding: 20px;
-            font-size: 24px;
-            position: relative;
+            font-size: 28px;
         }
         .nav {
-            text-align: center;
+            display: flex;
+            justify-content: center;
             padding: 10px;
             background-color: #2575fc;
             position: sticky;
@@ -35,9 +35,10 @@
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            transition: color 0.3s;
         }
         .nav a:hover {
-            text-decoration: underline;
+            color: #ffeb3b;
         }
         .section {
             margin: 20px;
@@ -49,11 +50,11 @@
         .section h2 {
             margin-bottom: 20px;
             color: #6a11cb;
-            font-size: 24px;
+            font-size: 26px;
         }
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
         .course {
@@ -63,8 +64,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
-            position: relative;
-            overflow: hidden;
         }
         .course:hover {
             transform: scale(1.05);
@@ -74,7 +73,7 @@
             border-radius: 8px;
         }
         .course h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin: 10px 0;
         }
         .course p {
@@ -82,7 +81,7 @@
             margin: 10px 0;
             color: #555;
         }
-        .submit-btn {
+        .purchase-btn {
             display: inline-block;
             padding: 10px 20px;
             background-color: #2575fc;
@@ -92,7 +91,7 @@
             transition: background-color 0.3s;
             cursor: pointer;
         }
-        .submit-btn:hover {
+        .purchase-btn:hover {
             background-color: #6a11cb;
         }
         .footer {
@@ -100,19 +99,14 @@
             padding: 20px;
             background-color: #2575fc;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
             .nav a {
-                display: block;
                 margin: 10px 0;
             }
-        }
-        .course-description {
-            font-size: 14px;
-            color: #777;
         }
     </style>
 </head>
@@ -140,70 +134,53 @@
 <div id="ai" class="section">
     <h2>AI Courses</h2>
     <div class="course-grid">
-        <!-- AI Course 1 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 1">
             <h3>AI Mastery: From Basics to Advanced</h3>
-            <p class="course-description">Become an AI expert with this comprehensive course.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone1">
-            <button class="submit-btn" onclick="submitPhone('AI Mastery', 'phone1')">Submit</button>
+            <p>Become an AI expert with this comprehensive course.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 2 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 2">
             <h3>Data Science with Python</h3>
-            <p class="course-description">Harness the power of Python for data analysis.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone2">
-            <button class="submit-btn" onclick="submitPhone('Data Science with Python', 'phone2')">Submit</button>
+            <p>Harness the power of Python for data analysis.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 3 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 3">
             <h3>Deep Learning Techniques</h3>
-            <p class="course-description">Unlock the secrets of deep learning and neural networks.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone3">
-            <button class="submit-btn" onclick="submitPhone('Deep Learning Techniques', 'phone3')">Submit</button>
+            <p>Unlock the secrets of deep learning and neural networks.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 4 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 4">
             <h3>Machine Learning with TensorFlow</h3>
-            <p class="course-description">Build intelligent systems using TensorFlow.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone4">
-            <button class="submit-btn" onclick="submitPhone('Machine Learning with TensorFlow', 'phone4')">Submit</button>
+            <p>Build intelligent systems using TensorFlow.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 5 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 5">
             <h3>AI in Business: Practical Applications</h3>
-            <p class="course-description">Discover how businesses leverage AI for growth.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone5">
-            <button class="submit-btn" onclick="submitPhone('AI in Business: Practical Applications', 'phone5')">Submit</button>
+            <p>Discover how businesses leverage AI for growth.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 6 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 6">
             <h3>Building Chatbots with AI</h3>
-            <p class="course-description">Create intelligent chatbots for customer service.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone6">
-            <button class="submit-btn" onclick="submitPhone('Building Chatbots with AI', 'phone6')">Submit</button>
+            <p>Create intelligent chatbots for customer service.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 7 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 7">
             <h3>AI for Data Visualization</h3>
-            <p class="course-description">Learn to visualize data using AI techniques.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone7">
-            <button class="submit-btn" onclick="submitPhone('AI for Data Visualization', 'phone7')">Submit</button>
+            <p>Learn to visualize data using AI techniques.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- AI Course 8 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="AI Course 8">
             <h3>AI Ethics and Societal Impact</h3>
-            <p class="course-description">Understand the ethical implications of AI technology.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone8">
-            <button class="submit-btn" onclick="submitPhone('AI Ethics and Societal Impact', 'phone8')">Submit</button>
-        </
+            <p>Understand the ethical implications of AI technology.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
     </div>
 </div>
@@ -212,45 +189,35 @@
 <div id="finance" class="section">
     <h2>Finance Courses</h2>
     <div class="course-grid">
-        <!-- Finance Course 1 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 1">
             <h3>Personal Finance Mastery</h3>
-            <p class="course-description">Take control of your finances and save effectively.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone9">
-            <button class="submit-btn" onclick="submitPhone('Personal Finance Mastery', 'phone9')">Submit</button>
+            <p>Take control of your finances and save effectively.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Finance Course 2 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 2">
             <h3>Investing 101</h3>
-            <p class="course-description">Learn the fundamentals of investing in the stock market.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone10">
-            <button class="submit-btn" onclick="submitPhone('Investing 101', 'phone10')">Submit</button>
+            <p>Learn the fundamentals of investing in the stock market.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Finance Course 3 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 3">
             <h3>Understanding Cryptocurrency</h3>
-            <p class="course-description">Dive into the world of cryptocurrency and blockchain technology.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone11">
-            <button class="submit-btn" onclick="submitPhone('Understanding Cryptocurrency', 'phone11')">Submit</button>
+            <p>Dive into the world of cryptocurrency and blockchain technology.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Finance Course 4 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 4">
             <h3>Tax Planning Strategies</h3>
-            <p class="course-description">Maximize your returns with effective tax planning.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone12">
-            <button class="submit-btn" onclick="submitPhone('Tax Planning Strategies', 'phone12')">Submit</button>
+            <p>Maximize your returns with effective tax planning.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Finance Course 5 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Finance Course 5">
             <h3>Retirement Planning</h3>
-            <p class="course-description">Plan for a secure and enjoyable retirement.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone13">
-            <button class="submit-btn" onclick="submitPhone('Retirement Planning', 'phone13')">Submit</button>
+            <p>Plan for a secure and enjoyable retirement.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
     </div>
 </div>
@@ -259,29 +226,24 @@
 <div id="english" class="section">
     <h2>English Speaking Courses</h2>
     <div class="course-grid">
-        <!-- English Course 1 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="English Course 1">
             <h3>Conversational English</h3>
-            <p class="course-description">Improve your speaking skills in everyday situations.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone14">
-            <button class="submit-btn" onclick="submitPhone('Conversational English', 'phone14')">Submit</button>
+           
+            <p>Improve your speaking skills in everyday situations.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- English Course 2 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="English Course 2">
             <h3>Business English</h3>
-            <p class="course-description">Learn the language of the business world.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone15">
-            <button class="submit-btn" onclick="submitPhone('Business English', 'phone15')">Submit</button>
+            <p>Learn the language of the business world.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- English Course 3 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="English Course 3">
             <h3>IELTS Preparation</h3>
-            <p class="course-description">Ace the IELTS exam with targeted preparation.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone16">
-            <button class="submit-btn" onclick="submitPhone('IELTS Preparation', 'phone16')">Submit</button>
+            <p>Ace the IELTS exam with targeted preparation.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
     </div>
 </div>
@@ -290,29 +252,23 @@
 <div id="jobsearch" class="section">
     <h2>Job Search Help</h2>
     <div class="course-grid">
-        <!-- Job Search Course 1 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Job Search Course 1">
             <h3>Resume Writing Essentials</h3>
-            <p class="course-description">Craft a standout resume that catches employers' attention.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone17">
-            <button class="submit-btn" onclick="submitPhone('Resume Writing Essentials', 'phone17')">Submit</button>
+            <p>Craft a standout resume that catches employers' attention.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Job Search Course 2 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Job Search Course 2">
             <h3>Interview Skills Training</h3>
-            <p class="course-description">Prepare for interviews and make a great impression.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone18">
-            <button class="submit-btn" onclick="submitPhone('Interview Skills Training', 'phone18')">Submit</button>
+            <p>Prepare for interviews and make a great impression.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
-        <!-- Job Search Course 3 -->
         <div class="course">
             <img src="https://via.placeholder.com/300x200" alt="Job Search Course 3">
             <h3>Networking Strategies</h3>
-            <p class="course-description">Build connections that open doors to new opportunities.</p>
-            <input type="text" placeholder="Enter your phone number" maxlength="10" id="phone19">
-            <button class="submit-btn" onclick="submitPhone('Networking Strategies', 'phone19')">Submit</button>
+            <p>Build connections that open doors to new opportunities.</p>
+            <a class="purchase-btn" href="#">Buy Now</a>
         </div>
     </div>
 </div>
@@ -321,18 +277,6 @@
     <p>&copy; 2024 Online Courses. All rights reserved.</p>
     <p>Contact us: info@onlinecourses.com</p>
 </div>
-
-<script>
-    function submitPhone(course, phoneInputId) {
-        var phoneNumber = document.getElementById(phoneInputId).value;
-        if (phoneNumber.length === 10) {
-            alert('Thank you for your interest in ' + course + '. We will contact you soon!');
-            document.getElementById(phoneInputId).value = ''; // Clear input after submission
-        } else {
-            alert('Please enter a valid 10-digit phone number.');
-        }
-    }
-</script>
 
 </body>
 </html>
