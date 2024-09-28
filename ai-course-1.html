@@ -3,80 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Mastery: From Basics to Advanced</title>
+    <title>Introduction to AI</title>
     <style>
         body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
         }
         .header {
-            background-color: #6a11cb;
+            background-color: #007bff;
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: center;
         }
         .course-content {
             background-color: white;
-            border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .buy-now {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #2575fc;
+        h1, h2 {
+            font-family: 'Georgia', serif;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .submit-button {
+            background-color: #007bff;
             color: white;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            cursor: pointer;
         }
-        .buy-now:hover {
-            background-color: #6a11cb;
+        .submit-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>AI Mastery: From Basics to Advanced</h1>
+    <h1>Introduction to AI</h1>
 </div>
 
 <div class="course-content">
     <h2>Course Overview</h2>
-    <p>This comprehensive course covers everything you need to know about Artificial Intelligence. You will learn the basics, advanced concepts, and practical applications.</p>
+    <p>Discover the fundamentals of Artificial Intelligence, its applications, and its impact on various industries.</p>
     
     <h3>What You'll Learn:</h3>
     <ul>
-        <li>Fundamentals of AI</li>
-        <li>Machine Learning Techniques</li>
-        <li>Deep Learning and Neural Networks</li>
-        <li>AI Applications in Real World</li>
+        <li>History and Evolution of AI</li>
+        <li>Basic Concepts and Terminology</li>
+        <li>Applications of AI in Business</li>
+        <li>Ethics in AI Development</li>
     </ul>
 
     <h3>Price: ₹99</h3>
     <h3>Enter Your Phone Number to Purchase:</h3>
-    <form id="purchaseForm" onsubmit="storeData(event)">
-        <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required>
-        <input type="hidden" id="courseName" value="AI Mastery: From Basics to Advanced">
-        <button type="submit" class="buy-now">Buy Now</button>
+    <form id="purchaseForm" onsubmit="handleSubmit(event)">
+        <input type="text" id="phoneNumber" placeholder="Enter 10-digit Phone Number" required>
+        <input type="hidden" id="courseName" value="Introduction to AI">
+        <button type="submit" class="submit-button">Submit</button>
     </form>
 </div>
 
 <script>
-    function storeData(event) {
+    function handleSubmit(event) {
         event.preventDefault();
         const phoneNumber = document.getElementById("phoneNumber").value;
         const courseName = document.getElementById("courseName").value;
 
+        // Validate phone number
+        const phoneRegex = /^[0-9]{10}$/;
+        if (!phoneRegex.test(phoneNumber)) {
+            alert('Please enter a valid 10-digit phone number.');
+            return;
+        }
+
+        // Store data in local storage
         localStorage.setItem('phoneNumber', phoneNumber);
         localStorage.setItem('courseName', courseName);
         
-        alert(`Thank you for purchasing ${courseName}!\nYour phone number has been stored.`);
-        window.location.href = 'index.html'; // Change this to your desired redirect page
+        // Redirect to payment gateway (dummy URL)
+        window.location.href = 'https://yourpaymentgateway.com'; // Change this to your payment gateway URL
     }
 </script>
 
