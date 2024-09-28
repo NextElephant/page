@@ -6,43 +6,94 @@
     <title>Introduction to AI</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
         }
         .header {
             background-color: #007bff;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .course-content {
             background-color: white;
-            padding: 20px;
+            padding: 30px;
             margin-top: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        h1, h2 {
-            font-family: 'Georgia', serif;
+        .course-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #333;
         }
         h3 {
-            margin-top: 20px;
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
         }
         ul {
             margin-left: 20px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
         }
         .submit-button {
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
         }
         .submit-button:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            input[type="text"], .submit-button {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
